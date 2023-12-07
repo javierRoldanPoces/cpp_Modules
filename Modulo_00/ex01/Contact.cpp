@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: javi <javi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:49:33 by javier            #+#    #+#             */
-/*   Updated: 2023/12/04 20:05:10 by javier           ###   ########.fr       */
+/*   Updated: 2023/12/05 12:29:43 by javi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Contact::~Contact()
 {
 }
 
-void Contact::add_contact()
+int Contact::add_contact()
 {
     std::string f_name;
     std::string l_name;
@@ -51,7 +51,7 @@ void Contact::add_contact()
     } while (p_number.empty());
     do
     {
-        std:cout  << "Insert darkset secret: ";
+        std::cout  << "Insert darkset secret: ";
         std::getline(std::cin, d_secret);
     } while (d_secret.empty());
     
@@ -59,7 +59,8 @@ void Contact::add_contact()
     this->last_name = l_name;
     this->nick_name = n_name;
     this->phone_number = p_number;
-    this->darkest_secret = d_secret;   
+    this->darkest_secret = d_secret;
+    return 1;
 }
 
 void	Contact::display_contact()
@@ -70,7 +71,7 @@ void	Contact::display_contact()
     std::cout << "Phone Number: " << this->phone_number << std::endl;
     std::cout << "Darkest secret: " << this->darkest_secret << std::endl;
 }
-// Falaria controlar si el size de la cadena es > 10 sustituir posicion [0] por un . y mostrar solo hasta esa posicion
+// Faltaria controlar si el size de la cadena es > 10 sustituir posicion [0] por un . y mostrar solo hasta esa posicion
 void	Contact::display_table()
 {
     std::cout << "|" << "         " << this->index;

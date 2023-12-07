@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: javier <javier@student.42.fr>              +#+  +:+       +#+        */
+/*   By: javi <javi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 18:49:36 by javier            #+#    #+#             */
-/*   Updated: 2023/12/04 20:28:25 by javier           ###   ########.fr       */
+/*   Updated: 2023/12/05 12:11:08 by javi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class PhoneBook
 {
     private:
         Contact contact[8];
-        unsigned int    index_last;
+        unsigned int    index_last; // Guardamos ultima posicion que se guardo para ir reemplazando por el mas antiguo
     public:
         PhoneBook();
         ~PhoneBook();
